@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 836993710487379812}
   - component: {fileID: 2754042240563237050}
   - component: {fileID: 6253682191247233197}
+  - component: {fileID: 1860586106377942919}
   m_Layer: 0
   m_Name: EnemyGunship
   m_TagString: EnemyShip
@@ -275,3 +276,15 @@ MonoBehaviour:
   fire: {fileID: 8300000, guid: 003247987877cd444959e361c17f6ee4, type: 3}
   enemyShip: {fileID: 1290102095530848641}
   bullet: {fileID: 6339229998710196094, guid: 9efb0d57a4d93644ead52962cf4937ac, type: 3}
+--- !u!114 &1860586106377942919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290102095530848641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9179f952cebb0b4088d1ce19c5421d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

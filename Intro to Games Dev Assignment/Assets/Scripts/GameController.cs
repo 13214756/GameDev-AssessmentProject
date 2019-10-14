@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     private int score;
     private int highScore;
     private int asteroidsRemaining;
+    private int enemiesRemaining = 1;
     private int lives;
     private int wave;
     private int increaseEachWave = 4;
@@ -62,13 +63,27 @@ public class GameController : MonoBehaviour
 
         for (int i = 0; i < asteroidsRemaining; i++) // Spawning asteroids
         {
-            GameObject bigAsteroid = Instantiate(asteroid, new Vector3(Random.Range(-9.0f, 9.0f), Random.Range(-6.0f, 6.0f), 0), Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f))) as GameObject;
+            // Generate random points on screen
+            float spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
+            float spawnY = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
+            Vector2 spawnPos = new Vector2(spawnX, spawnY);
+
+            GameObject bigAsteroid = Instantiate(asteroid, spawnPos, Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f))) as GameObject;
             bigAsteroid.transform.localScale = bigAsteroidScale;
-        }
+        } // new Vector3(Random.Range(-9.0f, 9.0f)
 
         if (wave % 2 == 0)
         {
-            GameObject enemy = Instantiate(enemyShip, new Vector3(Random.Range(-9.0f, 9.0f), Random.Range(-6.0f, 6.0f), 0), Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f))) as GameObject;
+            for (int i = 0; i < enemiesRemaining; i++)
+            {
+                // Generate random points on screen
+                float spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
+                float spawnY = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
+                Vector2 spawnPos = new Vector2(spawnX, spawnY);
+
+                GameObject enemy = Instantiate(enemyShip, spawnPos, Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f))) as GameObject;
+            }
+            enemiesRemaining = enemiesRemaining + 1;
         }
         
         waveText.text = "WAVE: " + wave;

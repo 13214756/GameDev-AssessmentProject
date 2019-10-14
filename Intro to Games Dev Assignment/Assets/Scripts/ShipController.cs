@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour
 {
-    float rotationSpeed = 100.0f;
     float thrustForce = 3f;
 
     private Vector3 movement;
@@ -13,6 +12,8 @@ public class ShipController : MonoBehaviour
     public AudioClip shoot;
 
     public GameObject bullet;
+    public GameObject explosion;
+    GameObject explode;
 
     private GameController gameController;
 
@@ -60,6 +61,7 @@ public class ShipController : MonoBehaviour
         if (col.gameObject.tag != "Bullet")
         {
             AudioSource.PlayClipAtPoint(crash, Camera.main.transform.position);
+            PlayAnimation();
 
             // Move ship to centre of screen
             transform.position = new Vector3(0, 0, 0);
@@ -78,5 +80,18 @@ public class ShipController : MonoBehaviour
 
         // Play shooting sound
         AudioSource.PlayClipAtPoint(shoot, Camera.main.transform.position);
+    }
+
+    void PlayAnimation()
+    {
+        // Spawn explosion
+        explode = Instantiate(explosion, transform.position, transform.rotation);
+
+        Invoke("Destroy", 1);
+    }
+
+    void Destroy()
+    {
+        Destroy(explode);
     }
 }

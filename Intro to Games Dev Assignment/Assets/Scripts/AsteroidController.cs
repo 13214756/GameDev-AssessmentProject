@@ -24,7 +24,7 @@ public class AsteroidController : MonoBehaviour
         if(col.gameObject.tag.Equals("Bullet"))
         {
             // Destroys bullet
-            Destroy(col.gameObject);
+            //Destroy(col.gameObject);
 
             // If large asteroid, spawn smaller ones
             if(transform.localScale == new Vector3(1.5f, 1.5f, 1.5f))

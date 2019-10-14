@@ -8,9 +8,14 @@ public class EnemyShipController : MonoBehaviour
     public AudioClip fire;
     public GameObject enemyShip;
     public GameObject bullet;
+    GameObject playerShip;
     
-    private float enemySpeed = 0.5f;
-    private float shootSpeed = 2.0f;
+    private float shootSpeed = 3.0f;
+    Vector3 playerPos;
+    Vector3 vectorToTarget;
+    float angle;
+    Quaternion q;
+    Quaternion playerAngle;
 
     private GameController gameController;
 
@@ -21,6 +26,8 @@ public class EnemyShipController : MonoBehaviour
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
         gameController = gameControllerObject.GetComponent<GameController>();
 
+        playerShip = GameObject.FindGameObjectWithTag("Ship");
+
         InvokeRepeating("ShootBullets", 1.0f, shootSpeed);
     }
 
@@ -28,7 +35,15 @@ public class EnemyShipController : MonoBehaviour
     void Update()
     {
         // Moving ship in direction it faces
-        transform.Translate(Vector3.up * enemySpeed * Time.deltaTime);
+        //transform.Translate(Vector3.up * enemySpeed * Time.deltaTime);
+        //transform.LookAt(playerPos, Vector3.up);
+
+        // Find new pos of player ship
+        playerPos = playerShip.transform.position;
+        vectorToTarget = playerPos - transform.position;
+        angle = (Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg) + 90;
+        q = Quaternion.AngleAxis(angle, Vector3.forward);
+        playerAngle = Quaternion.Slerp(transform.rotation, q, Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D col)

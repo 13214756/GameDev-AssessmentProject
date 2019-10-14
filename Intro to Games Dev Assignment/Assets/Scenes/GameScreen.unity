@@ -680,6 +680,8 @@ MonoBehaviour:
   crash: {fileID: 8300000, guid: f853c6d6be8b9a94580bfac8cc3cd195, type: 3}
   shoot: {fileID: 8300000, guid: 6c9fc06bc86296f45983aae93d59fdfa, type: 3}
   bullet: {fileID: 6768675709404243465, guid: 9a376812dbdb7d448ba6c860becef525, type: 3}
+  explosion: {fileID: 7053956825409024563, guid: fade4303a0744a44daea9592fa11555d,
+    type: 3}
 --- !u!60 &866027847
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1087,6 +1089,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroid: {fileID: 788093500291032468, guid: 2354496d45eb38d468f446539da29df2, type: 3}
+  enemyShip: {fileID: 1290102095530848641, guid: 6996cba560e958445b4375f2b69feb39,
+    type: 3}
   scoreText: {fileID: 444563437}
   livesText: {fileID: 1765810299}
   waveText: {fileID: 251292329}

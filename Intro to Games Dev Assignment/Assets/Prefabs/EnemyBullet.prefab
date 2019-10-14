@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2450253032098420203}
   - component: {fileID: 5396487944291008527}
   - component: {fileID: 7722326876027516704}
+  - component: {fileID: 849873302715728183}
+  - component: {fileID: 2594253925277481244}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: EnemyBullet
@@ -265,3 +267,30 @@ PolygonCollider2D:
       - {x: 0.23146427, y: -0.19121414}
       - {x: 0.24433851, y: -0.08133729}
       - {x: 0.27853572, y: 0.001777038}
+--- !u!114 &849873302715728183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6339229998710196094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e237aeec37aaa48a069dda99522542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!111 &2594253925277481244
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6339229998710196094}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
