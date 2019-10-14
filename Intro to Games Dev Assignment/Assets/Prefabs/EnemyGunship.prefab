@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 4913989206085597682}
   - component: {fileID: 5201258906717016115}
   - component: {fileID: 836993710487379812}
+  - component: {fileID: 2754042240563237050}
+  - component: {fileID: 6253682191247233197}
   m_Layer: 0
   m_Name: EnemyGunship
-  m_TagString: Untagged
+  m_TagString: EnemyShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,3 +220,58 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!60 &2754042240563237050
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290102095530848641}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.14050426, y: 0.4736135}
+      - {x: -0.1431092, y: 0.4768907}
+      - {x: -0.39537802, y: 0.3118489}
+      - {x: -0.4934454, y: 0.08495817}
+      - {x: -0.47378153, y: -0.17983192}
+      - {x: -0.3256304, y: -0.37588224}
+      - {x: -0.11789927, y: -0.48016804}
+      - {x: 0.10875511, y: -0.4709871}
+      - {x: 0.2519381, y: -0.40736488}
+      - {x: 0.35126036, y: -0.31630275}
+      - {x: 0.4570589, y: -0.15806735}
+      - {x: 0.47372124, y: 0.034782268}
+      - {x: 0.4472269, y: 0.18016812}
+      - {x: 0.31823534, y: 0.36243686}
+--- !u!114 &6253682191247233197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290102095530848641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6507f3a5f7135049bda7c28ec7d0867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explode: {fileID: 8300000, guid: 576812673020c97419548bb49a73af2a, type: 3}
+  fire: {fileID: 8300000, guid: 003247987877cd444959e361c17f6ee4, type: 3}
+  enemyShip: {fileID: 1290102095530848641}
+  bullet: {fileID: 6339229998710196094, guid: 9efb0d57a4d93644ead52962cf4937ac, type: 3}

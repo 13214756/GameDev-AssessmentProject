@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ship
+  - Asteroid
+  - Bullet
+  - EnemyBullet
+  - EnemyShip
   layers:
   - Default
   - TransparentFX

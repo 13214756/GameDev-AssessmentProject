@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6339229998710196095}
   - component: {fileID: 2450253032098420203}
   - component: {fileID: 5396487944291008527}
+  - component: {fileID: 7722326876027516704}
   m_Layer: 0
   m_Name: EnemyBullet
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,3 +219,49 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &7722326876027516704
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6339229998710196094}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.26993728, y: 0.17694624}
+      - {x: 0.14096391, y: 0.20560701}
+      - {x: 0.084518075, y: 0.24694635}
+      - {x: 0.054001927, y: 0.25160545}
+      - {x: 0.00884819, y: 0.29566962}
+      - {x: -0.054666042, y: 0.2953862}
+      - {x: -0.14524794, y: 0.20979898}
+      - {x: -0.1590234, y: 0.16675808}
+      - {x: -0.19846249, y: 0.16695459}
+      - {x: -0.25859833, y: 0.12261589}
+      - {x: -0.2556696, y: 0.0010264963}
+      - {x: -0.2196486, y: -0.060228378}
+      - {x: -0.22414267, y: -0.16414277}
+      - {x: -0.15062618, y: -0.1922942}
+      - {x: -0.12256038, y: -0.24662855}
+      - {x: -0.012490749, y: -0.2842678}
+      - {x: 0.053955078, y: -0.2384106}
+      - {x: 0.18560708, y: -0.23707135}
+      - {x: 0.23146427, y: -0.19121414}
+      - {x: 0.24433851, y: -0.08133729}
+      - {x: 0.27853572, y: 0.001777038}
